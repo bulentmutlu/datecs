@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:keepScreenOn="true"
+    android:id="@+id/screenSaverLayout"
+    tools:context="com.blk.sdk.activity.ScreenSaver">
+
+    <com.daimajia.slider.library.SliderLayout
+        android:id="@+id/slider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        custom:auto_cycle="true"
+        custom:indicator_visibility="invisible"
+        custom:pager_animation="Accordion"
+        custom:pager_animation_span="1200" />
+
+    <!--<VideoView-->
+        <!--android:id="@+id/videoView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"/>-->
+
+    <!--<ImageView-->
+        <!--android:id="@+id/imageView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

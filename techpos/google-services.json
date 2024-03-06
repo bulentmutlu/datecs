@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "224795461976",
+    "firebase_url": "https://techpos920-77956.firebaseio.com",
+    "project_id": "techpos920-77956",
+    "storage_bucket": "techpos920-77956.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224795461976:android:e1d68dca1d800820",
+        "android_client_info": {
+          "package_name": "com.blk.techpos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "224795461976-b73d4rk9818rtuido4a66kpvru5uo7hb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvB71AH8ApzL8Cukk7hPQ2SmZONPDBCmE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

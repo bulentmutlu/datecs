@@ -1,0 +1,57 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 33
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 33
+        buildConfigField 'String', 'LIB_VERSION', '"1.0"'
+        ndkVersion '22.1.7171670'
+        ndk{
+            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86' ,'x86_64'
+        }
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+//    sourceSets.main {
+//        jniLibs.srcDirs = ['libs/jniLibs', 'libs/jniLibs/openssl' ]
+//    }
+    externalNativeBuild {
+        // The Android Gradle Plugin saves the build arguments it uses for executing a CMake build
+        // for each ABI and build type pair to the build_command.txt. These files are found in the
+        // following directory: <project-root>/<module-root>/.cxx/cmake/<build-type>/<ABI>/
+        cmake {
+            path file('src/main/cpp/CMakeLists.txt')
+            version '3.18.1'
+        }
+    }
+    namespace 'com.blk.sdk'
+}
+//repositories {
+//    flatDir { dirs 'libs' }
+//}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.zxing:core:3.4.1'
+    implementation 'com.daimajia.slider:library:1.1.5@aar'
+
+    implementation 'com.loopj.android:android-async-http:1.4.11'
+    //implementation 'com.github.idrissehitoglu2:platform:1.1@aar'
+    implementation project(path: ':platform')
+    implementation files('libs/lib.jar')
+    implementation 'org.jetbrains:annotations:15.0'
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    implementation files('libs\\com.android.printer.jar')
+
+}

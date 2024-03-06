@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdk 33
+    defaultConfig {
+
+        applicationId "com.blk.techpos"
+        minSdkVersion 23
+        targetSdkVersion 33
+        versionCode 1001
+        versionName "1.0.01"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+    namespace 'com.blk.techpos'
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.google.code.gson:gson:2.10'
+
+    //implementation files('libs/sdk-debug.aar')
+    //implementation files('C:\\project\\android\\sdklib\\sdk\\build\\outputs\\aar\\sdk-debug.aar')
+
+//    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+//    implementation 'com.squareup.retrofit2:retrofit:2.2.0'
+//    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
+//    implementation 'com.squareup.picasso:picasso:2.3.2'
+
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.daimajia.slider:library:1.1.5@aar'
+
+    debugImplementation project(path: ':blksdk')
+    debugImplementation project(path: ':platform_castle')
+    debugImplementation project(path: ':platform')
+    releaseImplementation 'com.github.idrissehitoglu2.blklib:platform:1.0'
+    releaseImplementation 'com.github.idrissehitoglu2.blklib:blksdk:1.0'
+    releaseImplementation 'com.github.idrissehitoglu2.blklib:platform_castle:1.0'
+}

@@ -1,0 +1,185 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="430dp"
+    >
+    <!--             tools:context="com.castech.emvl2_sampleap.Fragment_page_pinpad_ex" -->
+
+
+    <Button
+        android:id="@+id/KBD1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="147dp"
+        android:elevation="0dp"
+        android:text="1"/>
+
+    <Button
+        android:id="@+id/KBD2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignTop="@+id/KBD1"
+        android:layout_marginStart="13dp"
+        android:layout_toEndOf="@+id/KBD1"
+        android:text="2"/>
+
+    <Button
+        android:id="@+id/KBD3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignBottom="@+id/KBD2"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@+id/KBD2"
+        android:layout_toRightOf="@+id/KBD2"
+        android:text="3"/>
+
+    <Button
+        android:id="@+id/KBD_Cancel"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignTop="@+id/KBD3"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@+id/KBD3"
+        android:layout_toRightOf="@+id/KBD3"
+        android:text="X"
+        android:textSize="15sp"/>
+
+    <Button
+        android:id="@+id/KBD4"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="207dp"
+        android:text="4"/>
+
+    <Button
+        android:id="@+id/KBD5"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignTop="@+id/KBD4"
+        android:layout_marginStart="13dp"
+        android:layout_toEndOf="@+id/KBD4"
+        android:text="5"/>
+
+    <Button
+        android:id="@+id/KBD6"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignTop="@+id/KBD5"
+        android:layout_marginStart="13dp"
+        android:layout_toEndOf="@+id/KBD5"
+        android:text="6"/>
+
+
+    <Button
+        android:id="@+id/KBD_Clear"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/KBD_Enter"
+        android:layout_below="@+id/KBD_Cancel"
+        android:text="BS"
+        android:textSize="15sp"/>
+
+    <Button
+        android:id="@+id/KBD7"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="267dp"
+        android:text="7"/>
+
+    <Button
+        android:id="@+id/KBD8"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignTop="@+id/KBD7"
+        android:layout_marginStart="13dp"
+        android:layout_toEndOf="@+id/KBD7"
+        android:text="8"/>
+
+    <Button
+        android:id="@+id/KBD9"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignTop="@+id/KBD8"
+        android:layout_marginStart="13dp"
+        android:layout_toEndOf="@+id/KBD8"
+        android:text="9"/>
+
+    <Button
+        android:id="@+id/KBD_Enter"
+        android:layout_width="60dp"
+        android:layout_height="140dp"
+        android:layout_alignBottom="@+id/KBD0"
+        android:layout_alignTop="@+id/KBD0"
+        android:layout_marginStart="13dp"
+        android:layout_toEndOf="@+id/KBD9"
+        android:text="OK"
+        android:textColorLink="#ff40a6"/>
+
+
+    <Button
+        android:id="@+id/KBD0"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/KBD8"
+        android:layout_below="@+id/KBD8"
+        android:layout_marginTop="13dp"
+        android:text="0"/>
+
+    <TextView
+        android:id="@+id/textViewPinDigitEx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/KBD1"
+        android:layout_above="@+id/KBD2"
+        android:layout_marginTop="80dp"
+        android:textColor="@android:color/black"
+        android:background="#ffffe0"
+        android:textSize="20sp"/>
+<!--
+    <TextView
+        android:id="@+id/textViewME_PAN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textViewPinDigitEx"
+        android:layout_marginTop="22dp"
+        android:text="PAN : "
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/textViewME_EXP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textViewME_CSC"
+        android:layout_alignParentStart="true"
+        android:text="EXP : "
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/textViewME_CSC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/KBD2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="11dp"
+        android:text="CSC : "
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:visibility="invisible"/>-->
+
+
+</RelativeLayout>

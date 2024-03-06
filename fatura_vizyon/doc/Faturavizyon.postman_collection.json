@@ -1,0 +1,348 @@
+{
+	"info": {
+		"_postman_id": "d8c80eba-1540-43c0-95f5-1854e2e65588",
+		"name": "Faturavizyon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TestHash",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sandboxservices.faturavizyon.com.tr/api/integration/testhash?rawdata=123456789012345620220224110833&key=40HXJW1PFNQQSU0VPMHXKLHS5O4IXQQI",
+					"protocol": "https",
+					"host": [
+						"sandboxservices",
+						"faturavizyon",
+						"com",
+						"tr"
+					],
+					"path": [
+						"api",
+						"integration",
+						"testhash"
+					],
+					"query": [
+						{
+							"key": "rawdata",
+							"value": "123456789012345620220224110833"
+						},
+						{
+							"key": "key",
+							"value": "40HXJW1PFNQQSU0VPMHXKLHS5O4IXQQI"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetToken",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sandboxservices.faturavizyon.com.tr/api/integration/GetToken?dealercode=8543419999&apikey=0LLEZ0XMHMWPCUOQX64J6AJ9ZLQDELIH&rawdata=123456789012345620220224110833&hash=MDQyZDgwNTI0NDIxYTNjOGM3MDIwMmQ2ODgwZWZmZjE1MTI4YzIxZTU2YmFjNjMwNWQxNmRjMGE0MjFkZWNiYg==",
+					"protocol": "https",
+					"host": [
+						"sandboxservices",
+						"faturavizyon",
+						"com",
+						"tr"
+					],
+					"path": [
+						"api",
+						"integration",
+						"GetToken"
+					],
+					"query": [
+						{
+							"key": "dealercode",
+							"value": "8543419999"
+						},
+						{
+							"key": "apikey",
+							"value": "0LLEZ0XMHMWPCUOQX64J6AJ9ZLQDELIH"
+						},
+						{
+							"key": "rawdata",
+							"value": "123456789012345620220224110833"
+						},
+						{
+							"key": "hash",
+							"value": "MDQyZDgwNTI0NDIxYTNjOGM3MDIwMmQ2ODgwZWZmZjE1MTI4YzIxZTU2YmFjNjMwNWQxNmRjMGE0MjFkZWNiYg=="
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RefreshToken",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiQXV0aG9yaXplZCIsIklzQXBpVXNlciIsIkFjdGl2ZSJdLCJKd3RVc2VySW5mbyI6IntcIkVtYWlsXCI6XCJvcmhhbi5idWx1dEB2aXp5b25lcGFyYS5jb20udHJcIixcIlVzZXJJZFwiOjEsXCJEZWFsZXJJRHNTdHJpbmdcIjpcIlwiLFwiRGVhbGVySURzXCI6W10sXCJHU01Ob1wiOlwiMCg1MzIpNDIwIDMyOTBcIixcIlBlcm1pc3Npb25zXCI6bnVsbCxcIlVzZXJHcm91cElEc1wiOm51bGwsXCJEZWFsZXJJZFwiOjEsXCJBY2NvdW50SWRcIjoxNyxcIlNlc3Npb25Db2RlXCI6XCJcIixcIk5hbWVTdXJuYW1lXCI6XCJPcmhhbiBCdWx1dFwiLFwiRGVhbGVyT2ZmaWNpYWxDb2RlXCI6XCI4NTQzNDE5OTlcIixcIkRlYWxlclRheE5vXCI6XCI5MjUwNDcyOTM3XCIsXCJJc0FjdGl2ZVwiOnRydWUsXCJJc0F1dGhvcml6ZWRcIjp0cnVlLFwiSXNBcGlVc2VyXCI6dHJ1ZSxcIlJlc3RyaWN0ZWRJbnN0aXR1dGlvbnNcIjpbNDAwOV19IiwiU2Vzc2lvbkNvZGUiOiIyREhLSDZMQjhVT0pZTUdVNFFEUFNGWEM1MFlHTkVVUVVKQ1k3OEgzSVI2WVFWWUtVN0JVVlJGTDUyRTFGODBKQU44UFhMRlIyWU9SMkVLNEUxUFFOMDc2V05RSUZGT1MxNE41TEgzQUtMWTZETkNPNllRMkhOQUYzQTVSMzJRMiIsImV4cCI6MTY0NTY5MTg1OCwiaXNzIjoiRmF0dXJhdml6eW9uIiwiYXVkIjoiRGVhbGVycyJ9.kE65bmUyPLYA_14T_rWVCBI3m63xMO2haRmjRqkV1z4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sandboxservices.faturavizyon.com.tr/api/integration/refreshtoken",
+					"protocol": "https",
+					"host": [
+						"sandboxservices",
+						"faturavizyon",
+						"com",
+						"tr"
+					],
+					"path": [
+						"api",
+						"integration",
+						"refreshtoken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRemainder",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiQXV0aG9yaXplZCIsIklzQXBpVXNlciIsIkFjdGl2ZSJdLCJKd3RVc2VySW5mbyI6IntcIkVtYWlsXCI6XCJvcmhhbi5idWx1dEB2aXp5b25lcGFyYS5jb20udHJcIixcIlVzZXJJZFwiOjEsXCJEZWFsZXJJRHNTdHJpbmdcIjpcIlwiLFwiRGVhbGVySURzXCI6W10sXCJHU01Ob1wiOlwiMCg1MzIpNDIwIDMyOTBcIixcIlBlcm1pc3Npb25zXCI6bnVsbCxcIlVzZXJHcm91cElEc1wiOm51bGwsXCJEZWFsZXJJZFwiOjEsXCJBY2NvdW50SWRcIjoxNyxcIlNlc3Npb25Db2RlXCI6XCIyREhLSDZMQjhVT0pZTUdVNFFEUFNGWEM1MFlHTkVVUVVKQ1k3OEgzSVI2WVFWWUtVN0JVVlJGTDUyRTFGODBKQU44UFhMRlIyWU9SMkVLNEUxUFFOMDc2V05RSUZGT1MxNE41TEgzQUtMWTZETkNPNllRMkhOQUYzQTVSMzJRMlwiLFwiTmFtZVN1cm5hbWVcIjpcIk9yaGFuIEJ1bHV0XCIsXCJEZWFsZXJPZmZpY2lhbENvZGVcIjpcIjg1NDM0MTk5OVwiLFwiRGVhbGVyVGF4Tm9cIjpcIjkyNTA0NzI5MzdcIixcIklzQWN0aXZlXCI6dHJ1ZSxcIklzQXV0aG9yaXplZFwiOnRydWUsXCJJc0FwaVVzZXJcIjp0cnVlLFwiUmVzdHJpY3RlZEluc3RpdHV0aW9uc1wiOls0MDA5XX0iLCJTZXNzaW9uQ29kZSI6IkpMQzZSRTM0ODJZQU80WExHMVE0SUg0QzQwVEJUUlM4UDk1MUtRWDhOWjFGSVFaSUhVMk43NUFDWERMR1EwWDM4UFJHOVhZTFY2TzZBMFlCMkxPWVNQVkc0RVFKME9FQUxOUUNaOFlHSTZUMDc5UVdJQU5HM0Q3UVFNUFZHMEJZIiwiZXhwIjoxNjQ1NjkxODgzLCJpc3MiOiJGYXR1cmF2aXp5b24iLCJhdWQiOiJEZWFsZXJzIn0.n0mCTd1kYkGyxe8kFeHwNmkkxe8NvK0CXrLaIJd_2HQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sandboxservices.faturavizyon.com.tr/api/integration/getremainder",
+					"protocol": "https",
+					"host": [
+						"sandboxservices",
+						"faturavizyon",
+						"com",
+						"tr"
+					],
+					"path": [
+						"api",
+						"integration",
+						"getremainder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetInstitutionList",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiQXV0aG9yaXplZCIsIklzQXBpVXNlciIsIkFjdGl2ZSJdLCJKd3RVc2VySW5mbyI6IntcIkVtYWlsXCI6XCJvcmhhbi5idWx1dEB2aXp5b25lcGFyYS5jb20udHJcIixcIlVzZXJJZFwiOjEsXCJEZWFsZXJJRHNTdHJpbmdcIjpcIlwiLFwiRGVhbGVySURzXCI6W10sXCJHU01Ob1wiOlwiMCg1MzIpNDIwIDMyOTBcIixcIlBlcm1pc3Npb25zXCI6bnVsbCxcIlVzZXJHcm91cElEc1wiOm51bGwsXCJEZWFsZXJJZFwiOjEsXCJBY2NvdW50SWRcIjoxNyxcIlNlc3Npb25Db2RlXCI6XCIyREhLSDZMQjhVT0pZTUdVNFFEUFNGWEM1MFlHTkVVUVVKQ1k3OEgzSVI2WVFWWUtVN0JVVlJGTDUyRTFGODBKQU44UFhMRlIyWU9SMkVLNEUxUFFOMDc2V05RSUZGT1MxNE41TEgzQUtMWTZETkNPNllRMkhOQUYzQTVSMzJRMlwiLFwiTmFtZVN1cm5hbWVcIjpcIk9yaGFuIEJ1bHV0XCIsXCJEZWFsZXJPZmZpY2lhbENvZGVcIjpcIjg1NDM0MTk5OVwiLFwiRGVhbGVyVGF4Tm9cIjpcIjkyNTA0NzI5MzdcIixcIklzQWN0aXZlXCI6dHJ1ZSxcIklzQXV0aG9yaXplZFwiOnRydWUsXCJJc0FwaVVzZXJcIjp0cnVlLFwiUmVzdHJpY3RlZEluc3RpdHV0aW9uc1wiOls0MDA5XX0iLCJTZXNzaW9uQ29kZSI6IkpMQzZSRTM0ODJZQU80WExHMVE0SUg0QzQwVEJUUlM4UDk1MUtRWDhOWjFGSVFaSUhVMk43NUFDWERMR1EwWDM4UFJHOVhZTFY2TzZBMFlCMkxPWVNQVkc0RVFKME9FQUxOUUNaOFlHSTZUMDc5UVdJQU5HM0Q3UVFNUFZHMEJZIiwiZXhwIjoxNjQ1NjkxODgzLCJpc3MiOiJGYXR1cmF2aXp5b24iLCJhdWQiOiJEZWFsZXJzIn0.n0mCTd1kYkGyxe8kFeHwNmkkxe8NvK0CXrLaIJd_2HQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sandboxservices.faturavizyon.com.tr/api/integration/getinstitutionlist",
+					"protocol": "https",
+					"host": [
+						"sandboxservices",
+						"faturavizyon",
+						"com",
+						"tr"
+					],
+					"path": [
+						"api",
+						"integration",
+						"getinstitutionlist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BillInquiry",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiQXV0aG9yaXplZCIsIklzQXBpVXNlciIsIkFjdGl2ZSJdLCJKd3RVc2VySW5mbyI6IntcIkVtYWlsXCI6XCJvcmhhbi5idWx1dEB2aXp5b25lcGFyYS5jb20udHJcIixcIlVzZXJJZFwiOjEsXCJEZWFsZXJJRHNTdHJpbmdcIjpcIlwiLFwiRGVhbGVySURzXCI6W10sXCJHU01Ob1wiOlwiMCg1MzIpNDIwIDMyOTBcIixcIlBlcm1pc3Npb25zXCI6bnVsbCxcIlVzZXJHcm91cElEc1wiOm51bGwsXCJEZWFsZXJJZFwiOjEsXCJBY2NvdW50SWRcIjoxNyxcIlNlc3Npb25Db2RlXCI6XCIyREhLSDZMQjhVT0pZTUdVNFFEUFNGWEM1MFlHTkVVUVVKQ1k3OEgzSVI2WVFWWUtVN0JVVlJGTDUyRTFGODBKQU44UFhMRlIyWU9SMkVLNEUxUFFOMDc2V05RSUZGT1MxNE41TEgzQUtMWTZETkNPNllRMkhOQUYzQTVSMzJRMlwiLFwiTmFtZVN1cm5hbWVcIjpcIk9yaGFuIEJ1bHV0XCIsXCJEZWFsZXJPZmZpY2lhbENvZGVcIjpcIjg1NDM0MTk5OVwiLFwiRGVhbGVyVGF4Tm9cIjpcIjkyNTA0NzI5MzdcIixcIklzQWN0aXZlXCI6dHJ1ZSxcIklzQXV0aG9yaXplZFwiOnRydWUsXCJJc0FwaVVzZXJcIjp0cnVlLFwiUmVzdHJpY3RlZEluc3RpdHV0aW9uc1wiOls0MDA5XX0iLCJTZXNzaW9uQ29kZSI6IkpMQzZSRTM0ODJZQU80WExHMVE0SUg0QzQwVEJUUlM4UDk1MUtRWDhOWjFGSVFaSUhVMk43NUFDWERMR1EwWDM4UFJHOVhZTFY2TzZBMFlCMkxPWVNQVkc0RVFKME9FQUxOUUNaOFlHSTZUMDc5UVdJQU5HM0Q3UVFNUFZHMEJZIiwiZXhwIjoxNjQ1NjkxODgzLCJpc3MiOiJGYXR1cmF2aXp5b24iLCJhdWQiOiJEZWFsZXJzIn0.n0mCTd1kYkGyxe8kFeHwNmkkxe8NvK0CXrLaIJd_2HQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"institutionCode\":4002,\r\n    \"parameters\":[\"5420000000\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sandboxservices.faturavizyon.com.tr/api/integration/billinquiry",
+					"protocol": "https",
+					"host": [
+						"sandboxservices",
+						"faturavizyon",
+						"com",
+						"tr"
+					],
+					"path": [
+						"api",
+						"integration",
+						"billinquiry"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BillPayment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiQXV0aG9yaXplZCIsIklzQXBpVXNlciIsIkFjdGl2ZSJdLCJKd3RVc2VySW5mbyI6IntcIkVtYWlsXCI6XCJvcmhhbi5idWx1dEB2aXp5b25lcGFyYS5jb20udHJcIixcIlVzZXJJZFwiOjEsXCJEZWFsZXJJRHNTdHJpbmdcIjpcIlwiLFwiRGVhbGVySURzXCI6W10sXCJHU01Ob1wiOlwiMCg1MzIpNDIwIDMyOTBcIixcIlBlcm1pc3Npb25zXCI6bnVsbCxcIlVzZXJHcm91cElEc1wiOm51bGwsXCJEZWFsZXJJZFwiOjEsXCJBY2NvdW50SWRcIjoxNyxcIlNlc3Npb25Db2RlXCI6XCIyREhLSDZMQjhVT0pZTUdVNFFEUFNGWEM1MFlHTkVVUVVKQ1k3OEgzSVI2WVFWWUtVN0JVVlJGTDUyRTFGODBKQU44UFhMRlIyWU9SMkVLNEUxUFFOMDc2V05RSUZGT1MxNE41TEgzQUtMWTZETkNPNllRMkhOQUYzQTVSMzJRMlwiLFwiTmFtZVN1cm5hbWVcIjpcIk9yaGFuIEJ1bHV0XCIsXCJEZWFsZXJPZmZpY2lhbENvZGVcIjpcIjg1NDM0MTk5OVwiLFwiRGVhbGVyVGF4Tm9cIjpcIjkyNTA0NzI5MzdcIixcIklzQWN0aXZlXCI6dHJ1ZSxcIklzQXV0aG9yaXplZFwiOnRydWUsXCJJc0FwaVVzZXJcIjp0cnVlLFwiUmVzdHJpY3RlZEluc3RpdHV0aW9uc1wiOls0MDA5XX0iLCJTZXNzaW9uQ29kZSI6IkpMQzZSRTM0ODJZQU80WExHMVE0SUg0QzQwVEJUUlM4UDk1MUtRWDhOWjFGSVFaSUhVMk43NUFDWERMR1EwWDM4UFJHOVhZTFY2TzZBMFlCMkxPWVNQVkc0RVFKME9FQUxOUUNaOFlHSTZUMDc5UVdJQU5HM0Q3UVFNUFZHMEJZIiwiZXhwIjoxNjQ1NjkxODgzLCJpc3MiOiJGYXR1cmF2aXp5b24iLCJhdWQiOiJEZWFsZXJzIn0.n0mCTd1kYkGyxe8kFeHwNmkkxe8NvK0CXrLaIJd_2HQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Bills\": [\r\n        {\r\n            \"id\": 132900761285989371,\r\n            \"institutionCode\": 4002,\r\n            \"nameSurname\": \"OS*** CE****\",\r\n            \"amount\": 35.894230769230769230769230769,\r\n            \"lastPaymentDate\": \"2022-02-04T10:48:48.598923+03:00\",\r\n            \"billId\": \"DXCJ0XCVO7\",\r\n            \"transactionId\": \"132900761285989371\",\r\n            \"parameters\": [\r\n                \"5420000000\"\r\n            ],\r\n            \"statusCode\": 0,\r\n            \"isSuccess\": true,\r\n            \"description\": null\r\n        },\r\n        {\r\n            \"id\": 132900761285989390,\r\n            \"institutionCode\": 4002,\r\n            \"nameSurname\": \"OS*** CE****\",\r\n            \"amount\": 34.513683431952662721893491124,\r\n            \"lastPaymentDate\": \"2022-01-04T10:48:48.598923+03:00\",\r\n            \"billId\": \"9NBZFCNQEY\",\r\n            \"transactionId\": \"132900761285989390\",\r\n            \"parameters\": [\r\n                \"5420000000\"\r\n            ],\r\n            \"statusCode\": 0,\r\n            \"isSuccess\": true,\r\n            \"description\": null\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sandboxservices.faturavizyon.com.tr/api/integration/billpayment",
+					"protocol": "https",
+					"host": [
+						"sandboxservices",
+						"faturavizyon",
+						"com",
+						"tr"
+					],
+					"path": [
+						"api",
+						"integration",
+						"billpayment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPaymentsByIDs",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiQXV0aG9yaXplZCIsIklzQXBpVXNlciIsIkFjdGl2ZSJdLCJKd3RVc2VySW5mbyI6IntcIkVtYWlsXCI6XCJvcmhhbi5idWx1dEB2aXp5b25lcGFyYS5jb20udHJcIixcIlVzZXJJZFwiOjEsXCJEZWFsZXJJRHNTdHJpbmdcIjpcIlwiLFwiRGVhbGVySURzXCI6W10sXCJHU01Ob1wiOlwiMCg1MzIpNDIwIDMyOTBcIixcIlBlcm1pc3Npb25zXCI6bnVsbCxcIlVzZXJHcm91cElEc1wiOm51bGwsXCJEZWFsZXJJZFwiOjEsXCJBY2NvdW50SWRcIjoxNyxcIlNlc3Npb25Db2RlXCI6XCIyREhLSDZMQjhVT0pZTUdVNFFEUFNGWEM1MFlHTkVVUVVKQ1k3OEgzSVI2WVFWWUtVN0JVVlJGTDUyRTFGODBKQU44UFhMRlIyWU9SMkVLNEUxUFFOMDc2V05RSUZGT1MxNE41TEgzQUtMWTZETkNPNllRMkhOQUYzQTVSMzJRMlwiLFwiTmFtZVN1cm5hbWVcIjpcIk9yaGFuIEJ1bHV0XCIsXCJEZWFsZXJPZmZpY2lhbENvZGVcIjpcIjg1NDM0MTk5OVwiLFwiRGVhbGVyVGF4Tm9cIjpcIjkyNTA0NzI5MzdcIixcIklzQWN0aXZlXCI6dHJ1ZSxcIklzQXV0aG9yaXplZFwiOnRydWUsXCJJc0FwaVVzZXJcIjp0cnVlLFwiUmVzdHJpY3RlZEluc3RpdHV0aW9uc1wiOls0MDA5XX0iLCJTZXNzaW9uQ29kZSI6IkpMQzZSRTM0ODJZQU80WExHMVE0SUg0QzQwVEJUUlM4UDk1MUtRWDhOWjFGSVFaSUhVMk43NUFDWERMR1EwWDM4UFJHOVhZTFY2TzZBMFlCMkxPWVNQVkc0RVFKME9FQUxOUUNaOFlHSTZUMDc5UVdJQU5HM0Q3UVFNUFZHMEJZIiwiZXhwIjoxNjQ1NjkxODgzLCJpc3MiOiJGYXR1cmF2aXp5b24iLCJhdWQiOiJEZWFsZXJzIn0.n0mCTd1kYkGyxe8kFeHwNmkkxe8NvK0CXrLaIJd_2HQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sandboxservices.faturavizyon.com.tr/api/integration/getpaymentsbyids?ids=52,53",
+					"protocol": "https",
+					"host": [
+						"sandboxservices",
+						"faturavizyon",
+						"com",
+						"tr"
+					],
+					"path": [
+						"api",
+						"integration",
+						"getpaymentsbyids"
+					],
+					"query": [
+						{
+							"key": "ids",
+							"value": "52,53"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPaymentsByDate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOlsiQXV0aG9yaXplZCIsIklzQXBpVXNlciIsIkFjdGl2ZSJdLCJKd3RVc2VySW5mbyI6IntcIkVtYWlsXCI6XCJvcmhhbi5idWx1dEB2aXp5b25lcGFyYS5jb20udHJcIixcIlVzZXJJZFwiOjEsXCJEZWFsZXJJRHNTdHJpbmdcIjpcIlwiLFwiRGVhbGVySURzXCI6W10sXCJHU01Ob1wiOlwiMCg1MzIpNDIwIDMyOTBcIixcIlBlcm1pc3Npb25zXCI6bnVsbCxcIlVzZXJHcm91cElEc1wiOm51bGwsXCJEZWFsZXJJZFwiOjEsXCJBY2NvdW50SWRcIjoxNyxcIlNlc3Npb25Db2RlXCI6XCIyREhLSDZMQjhVT0pZTUdVNFFEUFNGWEM1MFlHTkVVUVVKQ1k3OEgzSVI2WVFWWUtVN0JVVlJGTDUyRTFGODBKQU44UFhMRlIyWU9SMkVLNEUxUFFOMDc2V05RSUZGT1MxNE41TEgzQUtMWTZETkNPNllRMkhOQUYzQTVSMzJRMlwiLFwiTmFtZVN1cm5hbWVcIjpcIk9yaGFuIEJ1bHV0XCIsXCJEZWFsZXJPZmZpY2lhbENvZGVcIjpcIjg1NDM0MTk5OVwiLFwiRGVhbGVyVGF4Tm9cIjpcIjkyNTA0NzI5MzdcIixcIklzQWN0aXZlXCI6dHJ1ZSxcIklzQXV0aG9yaXplZFwiOnRydWUsXCJJc0FwaVVzZXJcIjp0cnVlLFwiUmVzdHJpY3RlZEluc3RpdHV0aW9uc1wiOls0MDA5XX0iLCJTZXNzaW9uQ29kZSI6IkpMQzZSRTM0ODJZQU80WExHMVE0SUg0QzQwVEJUUlM4UDk1MUtRWDhOWjFGSVFaSUhVMk43NUFDWERMR1EwWDM4UFJHOVhZTFY2TzZBMFlCMkxPWVNQVkc0RVFKME9FQUxOUUNaOFlHSTZUMDc5UVdJQU5HM0Q3UVFNUFZHMEJZIiwiZXhwIjoxNjQ1NjkxODgzLCJpc3MiOiJGYXR1cmF2aXp5b24iLCJhdWQiOiJEZWFsZXJzIn0.n0mCTd1kYkGyxe8kFeHwNmkkxe8NvK0CXrLaIJd_2HQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sandboxservices.faturavizyon.com.tr/api/integration/getpaymentsbydate?t1=2022-02-24 00:00:00&t2=2022-02-24 23:59:59",
+					"protocol": "https",
+					"host": [
+						"sandboxservices",
+						"faturavizyon",
+						"com",
+						"tr"
+					],
+					"path": [
+						"api",
+						"integration",
+						"getpaymentsbydate"
+					],
+					"query": [
+						{
+							"key": "t1",
+							"value": "2022-02-24 00:00:00"
+						},
+						{
+							"key": "t2",
+							"value": "2022-02-24 23:59:59"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="30dp"
+    android:paddingBottom="30dp"
+    android:textAlignment="textEnd"
+    tools:context=".activity.BlankFragment">
+    <!-- tools:context, This is the activity the tools UI editor uses to render your layout preview.-->
+
+    <!--
+    android:layout_marginTop="15dp"
+    -->
+    <TextView
+        android:id="@+id/textViewCounter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="300"
+        android:textAlignment="viewEnd"
+        android:textColor="#F44336"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textViewTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="@string/Top_Text"
+        android:textSize="20sp" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/clear" />
+
+    <ProgressBar
+        android:id="@+id/loadingPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:indeterminate="true" />
+    <!--
+      <TextView
+          android:id="@+id/textViewBottom"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="15dp"
+          android:text="Bottom Text"
+
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintBottom_toBottomOf="parent"
+          />
+-->
+    <Button
+        android:id="@+id/buttonOK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="OK"
+
+        />
+
+</LinearLayout>

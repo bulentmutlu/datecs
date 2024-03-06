@@ -1,0 +1,18 @@
+
+<!--fatura vizyon test-->
+<!--<add key="faturaVizyonApiUrl" value="https://sandboxservices.faturavizyon.com.tr/api/integration/" />
+<add key="faturaVizyonApiKey" value="DJD0T6BGC44A3X1FXWF63L8HPZ4KJIFY" />
+<add key="faturaVizyonSecretKey" value="Q66KVKBBBCCKFF0FC4FXG9JDQV9X2N8P" />
+<add key="faturaVizyonDealerCode" value="8543440018" />
+<add key="faturaVizyonCommision" value="300" />-->
+<!--fatura vizyon-->
+
+<!--fatura vizyon prod-->
+<add key="faturaVizyonApiUrl" value="https://services.faturavizyon.com.tr/api/integration/" />
+<add key="faturaVizyonApiKey" value="W5JZ0XQV1Y7FE00F3DS97V7T0KVWEP1P" />
+<add key="faturaVizyonSecretKey" value="0O9EOJOPGOPD7K2ZDNQQAZ26SPTJQRN8" />
+<add key="faturaVizyonDealerCode" value="8543440020" />
+<add key="faturaVizyonCommision" value="300" />
+<!--fatura vizyon-->
+		
+		

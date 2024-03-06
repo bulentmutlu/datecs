@@ -1,0 +1,62 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        minSdk 23
+        targetSdk 32
+        buildConfigField 'String', 'LIB_VERSION', '"1.0"'
+
+        ndkVersion '22.1.7171670'
+        ndk{
+            abiFilters 'armeabi-v7a'
+        }
+
+        consumerProguardFiles "consumer-rules.pro"
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            // https://medium.com/native-mobile-bits/proguard-in-multi-module-android-app-custom-library-4893a2143e8b
+            // https://stackoverflow.com/questions/39199669/hide-classes-of-library-android
+            // https://robopress.robotsandpencils.com/how-to-use-proguard-with-your-android-library-c0a2b2b5d3b
+            // C:\Users\id\AppData\Local\Android\Sdk\tools\proguard\examples\library.pro
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    // https://developer.android.com/studio/releases/gradle-plugin#cmake-imported-targets
+    // External native build now automatically packages those libraries, so explicitly packaging the library with jniLibs results in a duplicate. To avoid the build error, move the prebuilt library to a location outside jniLibs or remove the jniLibs configuration from your build.gradle file.
+//    sourceSets.main {
+//        jniLibs.srcDirs = ['libs/jniLibs', 'libs/jniLibs/ctos' ]
+//    }
+    
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+            version "3.18.1"
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    namespace 'com.blk.ctos_api'
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':blksdk')
+    implementation project(path: ':platform')
+
+}
