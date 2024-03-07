@@ -66,7 +66,6 @@ public class MainPrinter {
 
         public void Write(final String buf)
         {
-
             if (this != lineWriter && string.IsSpace(buf)) {
                 lineWriter.Write(buf);
                 return;
@@ -103,8 +102,7 @@ public class MainPrinter {
         Thread t = new Thread(() -> {
             try {
                 Printer printer = PrinterManager.instance.getPrinter();
-                r.run(printer);
-                printer.feedPaper(255);
+                r.run( printer);
             } catch (IOException e) {
                 e.printStackTrace();
             } catch (Exception e) {
