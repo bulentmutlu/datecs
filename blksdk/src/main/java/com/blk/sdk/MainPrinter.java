@@ -48,21 +48,16 @@ public class MainPrinter {
 
         public void Write_LeftRight(String left, String right)
         {
-
-            try {
-                printer.printText(new string(left).PadCenter(right, maxChar, ' ').toString());
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+                runTask((printer) -> {
+                    printer.printText(new string(left).PadRight(maxChar, ' ').toString());
+                });
+               // printer.printText(new string(left).PadCenter(right, maxChar, ' ').toString());
         }
         public void Write_Center(final String buf)
         {
-
-            try {
-                printer.printText(new string(buf).Pad(maxChar, ' ').toString());
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+            runTask((printer) -> {
+                printer.printText(new string(buf).PadCenter(buf,maxChar, ' ').toString());
+            });
         }
         public void Write_Center(final byte[] buf)
         {
@@ -71,6 +66,7 @@ public class MainPrinter {
 
         public void Write(final String buf)
         {
+
             if (this != lineWriter && string.IsSpace(buf)) {
                 lineWriter.Write(buf);
                 return;
@@ -92,12 +88,10 @@ public class MainPrinter {
                 lineWriter42.Write(s);
                 return;
             }
-
-            try {
-                printer.printText(s);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+            final String finalS = s;
+            runTask((printer) -> {
+                printer.printText(finalS);
+            });
         }
         public void Write(final byte[] buf)
         {
@@ -109,7 +103,8 @@ public class MainPrinter {
         Thread t = new Thread(() -> {
             try {
                 Printer printer = PrinterManager.instance.getPrinter();
-                r.run( printer);
+                r.run(printer);
+                printer.feedPaper(255);
             } catch (IOException e) {
                 e.printStackTrace();
             } catch (Exception e) {
