@@ -24,8 +24,9 @@ public class MainPrinter {
     public static LineWriter boldWriter = new LineWriter(32, 20);
     public static LineWriter captionWriter = new LineWriter(40, 16);
 
+   public static Printer printer;
 
-    static Printer printer;
+    private static final int mDefaultFeed = 255;
 
     public static class LineWriter
     {
@@ -49,6 +50,7 @@ public class MainPrinter {
         public void Write_LeftRight(String left, String right)
         {
                 runTask((printer) -> {
+                    printer.reset();
                     printer.printText(new string(left).PadRight(maxChar, ' ').toString());
                 });
                // printer.printText(new string(left).PadCenter(right, maxChar, ' ').toString());
@@ -56,12 +58,18 @@ public class MainPrinter {
         public void Write_Center(final String buf)
         {
             runTask((printer) -> {
-                printer.printText(new string(buf).PadCenter(buf,maxChar, ' ').toString());
+                printer.reset();
+                printer.printTaggedText("{center}"+buf);
             });
         }
         public void Write_Center(final byte[] buf)
         {
-            Write_Center(new string(buf).toString());
+            runTask((printer) -> {
+                printer.reset();
+                printer.setAlign(Printer.ALIGN_CENTER);
+                printer.printText(new string(buf).toString());
+            });
+
         }
 
         public void Write(final String buf)
@@ -89,6 +97,7 @@ public class MainPrinter {
             }
             final String finalS = s;
             runTask((printer) -> {
+                printer.reset();
                 printer.printText(finalS);
             });
         }
@@ -96,6 +105,24 @@ public class MainPrinter {
         {
             Write(new string(buf).toString());
         }
+    }
+
+    public static void PrintFlush()
+    {
+        runTask((printer) -> {
+            printer.reset();
+            printer.feedPaper(printer.getInformation().getFeedLines());
+        });
+    }
+
+    public static void LineSpace()
+    {
+        runTask((printer) -> {
+            printer.reset();
+            //String textBuffer = "{br}";
+            //printer.printTaggedText(textBuffer);
+            printer.flush();
+        });
     }
 
     private static void runTask(final PrinterRunnable r) {
@@ -129,7 +156,7 @@ public class MainPrinter {
                     "{br}" +
                     "{reset}{center}{s}Thank You!{br}";
             printer.printTaggedText(textBuffer);
-            printer.feedPaper(255);
+            printer.feedPaper(mDefaultFeed);
             printer.flush();
         });
     }

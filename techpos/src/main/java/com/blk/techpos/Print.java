@@ -58,7 +58,6 @@ import java.util.Arrays;
 import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
-
 /**
  * Created by id on 29.03.2018.
  */
@@ -72,7 +71,11 @@ public class Print {
 
     static IPrinter IPrinter = IPlatform.get().printer;
 
-    public static void PrintFlush() throws InterruptedException, Exception {
+;
+
+    public static void PrintFlush()   {
+        MainPrinter.PrintFlush();
+        /*
         int rv = 0;
 
         if (IPrinter.OutofPaper()) {
@@ -103,6 +106,7 @@ public class Print {
         }
 
         Reset();
+         */
     }
 
     public static void PrintRED() throws Exception {
@@ -272,7 +276,9 @@ public class Print {
         if (detail == 0) {
             for (i = 0; i < bTots.len; i++) {
                 lineWriter.Write_Center(VTerm.GetVTermPrms().AcqInfos[i].AcqName);
-                lineWriter.Write_Center("----------------------------------------");
+                MainPrinter.LineSpace();
+                lineWriter.Write_Center( "--------------------------------");
+                MainPrinter.LineSpace();
                 lineWriter.Write("İŞYERİ NO: " + ToString(VTerm.GetVTermPrms().AcqInfos[i].MercId));
                 lineWriter.Write("TERMİNAL NO: " + ToString(VTerm.GetVTermPrms().AcqInfos[i].TermId));
                 lineWriter.Write("\n");
@@ -301,7 +307,9 @@ public class Print {
         } else {
             for (i = 0; i < VTerm.GetVTermPrms().AcqInfoLen; i++) {
                 lineWriter.Write_Center(VTerm.GetVTermPrms().AcqInfos[i].AcqName);
-                lineWriter.Write_Center( "----------------------------------------");
+                MainPrinter.LineSpace();
+                lineWriter.Write_Center( "--------------------------------");
+                MainPrinter.LineSpace();
                 lineWriter.Write("İŞYERİ NO: " + ToString(VTerm.GetVTermPrms().AcqInfos[i].MercId));
                 lineWriter.Write("TERMİNAL NO: " + ToString(VTerm.GetVTermPrms().AcqInfos[i].TermId));
                 lineWriter.Write("PARA BİRİMİ: TL");
@@ -436,7 +444,9 @@ public class Print {
 
         for (i = 0; i < bTots.len; i++) {
             lineWriter.Write_Center(VTerm.GetVTermPrms().AcqInfos[i].AcqName);
-            lineWriter.Write_Center("----------------------------------------");
+            MainPrinter.LineSpace();
+            lineWriter.Write_Center( "--------------------------------");
+            MainPrinter.LineSpace();
             lineWriter.Write("İŞYERİ NO: " + ToString(VTerm.GetVTermPrms().AcqInfos[i].MercId));
             lineWriter.Write("TERMİNAL NO: " + ToString(VTerm.GetVTermPrms().AcqInfos[i].TermId));
             lineWriter.Write("\n");
