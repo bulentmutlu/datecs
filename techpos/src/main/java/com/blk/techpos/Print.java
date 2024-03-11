@@ -1,6 +1,5 @@
 package com.blk.techpos;
 
-import static com.blk.sdk.MainPrinter.Reset;
 import static com.blk.sdk.MainPrinter.boldWriter;
 import static com.blk.sdk.MainPrinter.captionWriter;
 import static com.blk.sdk.MainPrinter.lineWriter;
@@ -71,10 +70,9 @@ public class Print {
 
     static IPrinter IPrinter = IPlatform.get().printer;
 
-;
 
     public static void PrintFlush()   {
-        MainPrinter.PrintFlush();
+    MainPrinter.PrintFlush();
         /*
         int rv = 0;
 

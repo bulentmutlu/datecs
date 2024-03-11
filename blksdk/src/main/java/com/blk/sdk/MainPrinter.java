@@ -26,7 +26,7 @@ public class MainPrinter {
 
    public static Printer printer;
 
-    private static final int mDefaultFeed = 255;
+    private static final int mDefaultFeed = 300;
 
     public static class LineWriter
     {
@@ -111,25 +111,29 @@ public class MainPrinter {
     {
         runTask((printer) -> {
             printer.reset();
-            printer.feedPaper(printer.getInformation().getFeedLines());
+//            printer.feedPaper(mDefaultFeed);
+            printer.flush();
+
         });
     }
 
     public static void LineSpace()
     {
-        runTask((printer) -> {
-            printer.reset();
-            //String textBuffer = "{br}";
-            //printer.printTaggedText(textBuffer);
-            printer.flush();
-        });
+//        runTask((printer) -> {
+//            printer.reset();
+//            //String textBuffer = "{br}";
+//            //printer.printTaggedText(textBuffer);
+//            printer.flush();
+//        });
     }
+
+
 
     private static void runTask(final PrinterRunnable r) {
         Thread t = new Thread(() -> {
             try {
                 Printer printer = PrinterManager.instance.getPrinter();
-                r.run( printer);
+                r.run(printer);
             } catch (IOException e) {
                 e.printStackTrace();
             } catch (Exception e) {
@@ -141,8 +145,7 @@ public class MainPrinter {
     public static void PrintTest() {
 
         runTask((printer) -> {
-            printer.reset();
-            String textBuffer = "{reset}{center}{w}{h}RECEIPT" +
+            String textBuffer = "{reset}{center}{w}{h}BAŞ TEST EDİYORUMÜĞÇÖ" +
                     "{br}" +
                     "{br}" +
                     "{reset}1. {b}First item{br}" +
